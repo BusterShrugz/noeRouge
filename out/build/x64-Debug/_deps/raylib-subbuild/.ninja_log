@@ -1,0 +1,21 @@
+# ninja log v6
+13	286	7645397047197655	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	c04d343841b523b2
+13	286	7645397047197655	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	c04d343841b523b2
+288	163128	7645398675666569	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	bb5afbca71908cc2
+288	163128	7645398675666569	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	bb5afbca71908cc2
+163129	163389	7645398678206715	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	682efe2970ccb8ff
+163129	163389	7645398678206715	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	682efe2970ccb8ff
+163389	163646	7645398680856177	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	7d16e14a3e5e7604
+163389	163646	7645398680856177	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	7d16e14a3e5e7604
+163646	163898	7645398683355219	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	6d32a48cd2597e43
+163646	163898	7645398683355219	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	6d32a48cd2597e43
+163899	164152	7645398685874945	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	c65300141c94b892
+163899	164152	7645398685874945	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	c65300141c94b892
+164153	164410	7645398688464313	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	8c9fe1117d9be425
+164153	164410	7645398688464313	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	8c9fe1117d9be425
+164411	164672	7645398691095884	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	8a51ecafbc405496
+164411	164672	7645398691095884	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	8a51ecafbc405496
+164673	165048	7645398694806835	CMakeFiles/raylib-populate-complete	af165da1d057e71d
+164673	165048	7645398694806835	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	af165da1d057e71d
+164673	165048	7645398694806835	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete	af165da1d057e71d
+164673	165048	7645398694806835	C:/Users/reese/Desktop/SCHOOLUSB/C++2025/RogueLike/out/build/x64-Debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	af165da1d057e71d
