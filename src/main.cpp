@@ -69,7 +69,7 @@ int main() {
             // for testing purposes only
         for (Rectangle rect : globals::GetCollisionRectangles())
         {
-           DrawRectangle( rect.x, rect.y, rect.width, rect.height, YELLOW );
+           DrawRectangle( rect.x, rect.y, rect.width, rect.height, DARKBLUE );
             
         }
 
