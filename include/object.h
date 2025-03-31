@@ -2,6 +2,7 @@
 #define H_OBJECT
 #include <cstdio>
 #include <vector>
+#include "raylib.h"
 
 /*
 // TODO list:
@@ -10,14 +11,12 @@
 //
 */
 
-// Prototype player
-class player;
-
 class gameObject {
 private:
     int id;
 
 public:
+    gameObject() {}
     gameObject(int id) {
         this->id = id;
     }
@@ -28,6 +27,8 @@ public:
 
     // Getters
     int getId();
+    // Setters
+    void setId(int id);
 
     virtual void onTick();
     // TODO 00
@@ -50,9 +51,10 @@ public:
     }
 
     void tickAll();
+    void renderAll();
     class gameObject *getObject(int id);
     class gameObject *createObject();
-    class player *createPlayer();
+    class player *createPlayer(Vector2 position, Vector2 size, int speed);
 };
 
 #endif
