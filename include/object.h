@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <vector>
 #include "raylib.h"
+#include "player.h"   // Include player 
 
 /*
 // TODO list:
@@ -16,11 +17,12 @@ private:
     int id;
 
 public:
+    
     gameObject() {}
     gameObject(int id) {
         this->id = id;
     }
-    ~gameObject() {
+    virtual~gameObject() {
         // No memory is currently allocated, do nothing
         ;;
     }
@@ -31,7 +33,6 @@ public:
     void setId(int id);
 
     virtual void onTick();
-    // TODO 00
     virtual void onRender();
 };
 
@@ -42,19 +43,16 @@ private:
     std::vector<class gameObject *> allObjects;
 
 public:
-    objectHandler() {
-        this->numberOfObjects = 0;
-        this->nextId = 0;
-    }
-    ~objectHandler() {
-        ;;
-    }
+    objectHandler() : numberOfObjects(0), nextId(0) {}
+    ~objectHandler();
 
     void tickAll();
     void renderAll();
     class gameObject *getObject(int id);
     class gameObject *createObject();
-    class player *createPlayer(Vector2 position, Vector2 size, int speed);
+
+    //create player
+    player *createPlayer(Vector2 position, Vector2 size, int speed);
 };
 
 #endif

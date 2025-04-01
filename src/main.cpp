@@ -9,8 +9,11 @@
 // Local includes
 #include "object.h"
 #include "globals.h"
-#include <mapGen.h>
+#include "player.h"       // Add player header
+#include "enemies.h"        // Add enemy header
 
+// Map generation
+#include "mapGen.h"
 /*
 // TODO list (class voted it to be here)
 // This list is worse than a todo at each thing because you have to just figure
@@ -27,65 +30,67 @@
 
 constexpr int SCREEN_WIDTH = 800;
 constexpr int SCREEN_HEIGHT = 450;
-
 constexpr int FPS = 60;
-
 constexpr int PLAYER_SPEED = 300;
 
 int main() {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "noeRouge alpha v0.1");
     SetTargetFPS(FPS);
 
-        // TODO 00
-    bool isGameRunning = true;
         // Create the objectHandler
-    class objectHandler objectHandler;
-    class gameObject *testObject;
+    objectHandler objectHandler;
+    
+    // Player instance
+    player* player1 = objectHandler.createPlayer(
+        { GetScreenWidth() / 2.0f, GetScreenHeight() / 2.0f },
+        { 30, 30 },
+        PLAYER_SPEED
+    );
 
-        // Print version info
+       // Create enemies
+    std::vector<classEnemy*> enemies = {
+        new classEnemy(400, 300, 100, 5, 'E'),
+        new classEnemy(600, 400, 120, 10, 'E'),
+        new classEnemy(500, 350, 80, 3, 'E')
+    }; 
+    
+    // Print version info
     std::cout << "noeRouge alpha v0.1\n";
-
-        // Test object creation
-    objectHandler.createObject();
-    testObject = objectHandler.getObject(0);
-    std::cout << testObject->getId() << std::endl;
-
-        // Create a player so we can see it tick, and see it on screen
-    objectHandler.createPlayer( { GetScreenWidth() / 2.0f, GetScreenHeight() / 2.0f }, {30, 30}, 300);
-
-    objectHandler.tickAll();
 
         // driver code - just for testing before real driver code
     while (!WindowShouldClose())
     {
-        objectHandler.tickAll();
+        // Update
+        player1->updateDirection();
+        player1->meleeAttack(enemies);
 
+        //render
         BeginDrawing();
-
         ClearBackground(BLACK);
 
-        objectHandler.renderAll();
+        // Render player and enemies
+        player1->onRender();
 
-            // for testing purposes only
+        for (classEnemy*& enemy : enemies) {
+            enemy->render();
+        }
+
+        // for testing purposes only
         for (Rectangle rect : globals::GetCollisionRectangles())
         {
-           DrawRectangle( rect.x, rect.y, rect.width, rect.height, DARKBLUE );
+           DrawRectangle( 5,8,24,25, DARKBLUE );
             
         }
 
         EndDrawing();
     }
 
-    // TODO 01
-    /*
-    while (isGameRunning) {
-        time stuff
-
-        if (tick) {
-            objectHandler.tickAll();
-        }
+    // Cleanup
+    delete player1;
+    for (auto& enemy : enemies) {
+        delete enemy;
     }
-    */
 
+    CloseWindow();
     return 0;
 }
