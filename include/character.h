@@ -29,7 +29,7 @@ protected:
 
     Rectangle bounds();
 
-    virtual void updateDirection() {};
+    void updateDirection() {};
 
 public:
 
@@ -37,7 +37,7 @@ public:
 
     Character(int _id);
 
-    ~Character()
+    virtual ~Character()
     {
         //destructor
     }
